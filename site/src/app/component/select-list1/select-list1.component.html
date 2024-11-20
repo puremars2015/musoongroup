@@ -1,0 +1,4 @@
+<select class="form-control" [ngModel]="selectedValue">
+    <option value="">請選擇</option>
+    <option *ngFor="let o of options" value="o.value">{{o.text}}</option>
+</select>

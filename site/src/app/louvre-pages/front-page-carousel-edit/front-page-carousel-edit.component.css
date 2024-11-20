@@ -1,0 +1,17 @@
+body {
+    background-color: #f0f4ff;
+}
+.container {
+    margin-top: 20px;
+}
+.btn-save {
+    background-color: #28a745;
+    color: white;
+}
+.btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-group {
+    text-align: right;
+}

@@ -1,0 +1,43 @@
+<!-- Basic Modal -->
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#orderListModal"
+  (click)="OpenModal()">
+  查詢表單號碼
+</button>
+<div class="modal fade" id="orderListModal" tabindex="-1" [ngStyle]="ModalStyle">
+  <div class="modal-dialog">
+    <div class="modal-content" [ngStyle]="ContentStyle">
+      <div class="modal-header">
+        <h5 class="modal-title">表單列表</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          (click)="CloseModal()"></button>
+      </div>
+      <div class="modal-body">
+        <table style="width:100%">
+          <thead>
+            <!-- <th><label></label></th> -->
+            <th *ngFor="let cn of ColumnNameList" [ngStyle]="ColumnNameListWidth">
+              {{cn}}
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of DisplayData" (click)="SelectWorkOrder(row)" data-bs-dismiss="modal" class="list-item">
+              <!-- <td><button type="button" class="btn btn-primary" (onclick)="SelectWorkOrder(row[0].value)">帶入</button></td> -->
+              <td *ngFor="let c of row">{{c.value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" (click)="ChangePage(-1)">Previous</a></li>
+          <li class="page-item" *ngFor="let p of range(1,PageCount)">
+            <a class="page-link" (click)="OnClickPageButton(p)">{{p}}</a>
+          </li>
+          <li class="page-item"><a class="page-link" (click)="ChangePage(1)">Next</a></li>
+        </ul>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="CloseModal()">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Basic Modal-->

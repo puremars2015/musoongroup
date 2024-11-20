@@ -1,0 +1,23 @@
+<table>
+    <tr>
+        <td class="column-header" *ngFor="let cn of ColumnNameList" [ngStyle]="ColumnNameListWidth">
+            {{cn}}
+        </td>
+    </tr>
+    <tr *ngFor="let row of DisplayData">
+        <td *ngFor="let c of row">{{c.value}}</td>
+    </tr>
+
+</table>
+<div class="pager-component">
+    <div class="pager">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" (click)="ChangePage(-1)">Previous</a></li>
+            <li class="page-item" *ngFor="let p of range(1,PageCount+1)">
+                <a class="page-link" (click)="OnClickPageButton(p)">{{p}}</a>
+            </li>
+            <li class="page-item"><a class="page-link" (click)="ChangePage(1)">Next</a></li>
+        </ul>
+    </div>
+
+</div>

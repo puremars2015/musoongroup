@@ -1,0 +1,263 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+tr {
+    background-color: #f2f2f2;
+}
+
+.w-10-p {
+    width:10%;
+}
+
+.w-15-p {
+    width:15%;
+}
+
+.w-16-p {
+    width:16%;
+}
+
+.w-20-p {
+    width: 20%;
+}
+
+.w-25-p {
+    width: 25%;
+}
+
+.w-30-p {
+    width: 30%;
+}
+
+.w-35-p {
+    width: 35%;
+}
+
+.w-40-p {
+    width: 40%;
+}
+
+.w-50-p {
+    width: 50%;
+}
+
+.w-100-p {
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+}
+
+.flex-container > div {
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 16px;
+}
+
+.row > div {
+    border-style:solid;
+}
+
+.column {
+    display: inline-block;
+    /* flex-direction: column; */
+}
+
+.column-border {
+    border: 1px solid black;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.margin-h10 {
+    margin: 0px 10px 0px 10px;
+}
+
+.column-header {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.f-12 {
+    font-size: 12px;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.column-label-name {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(30, 206, 255);
+    color: white;
+}
+
+.sub-column-label-name {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(200, 214, 219);
+    color: white;
+}
+
+.normal-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: black
+}
+
+.w-1-vw {
+    width: 1vw;
+}
+
+.w-2-vw {
+    width: 2vw;
+}
+
+.w-3-vw {
+    width: 3vw;
+}
+
+.w-4-vw {
+    width: 4vw;
+}
+
+.w-5-vw {
+    width: 5vw;
+}
+
+.rwd-50-100 {
+    width: 50%;
+}
+
+.hightlight {
+    background-color: yellow;
+}
+
+.cotton-input-detail {
+    font-size: 12px;
+}
+
+.cotton-input-display {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .w-15-p {
+        width: 100%;
+    }
+
+    .w-16-p {
+        width: 100%; /* 在較小螢幕上，每個div佔滿整行 */
+    }
+
+    .cotton-input-detail {
+        width: 90%;
+    }
+}
+/* button */
+.maintain-delete-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.maintain-delete-button:hover {
+    opacity: 0.7;
+}
+
+.update-button {
+    cursor: pointer;
+    padding: 0;
+    background-color: rgb(223, 222, 222);
+    border-radius: 4px;
+}
+
+.update-button:hover {
+    opacity: 0.7;
+}
+
+/* table */
+.table-format{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+.star-mark:before {
+    content: '*';
+    color: rgb(226, 53, 53);
+    display: inline-block;
+    margin-right: 2px; /* 可以根據需要調整星號與文字之間的距離 */
+
+}
+/* Selects any <input> element that is read-only */
+/* Supported in Firefox with a prefix */
+input:-moz-read-only {
+    background-color: #ccc;
+}
+  
+/* Supported in Blink/WebKit/Edge without a prefix */
+input:read-only {
+    background-color: #ccc;
+}
+
+.box-template {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin: 2em 0;
+    padding: 20px;
+    position: relative;
+  }
+  
+.box-template::before {
+    background-color:#F6F9FF;
+    color: #000000;
+    content: attr(data-title);
+    font-weight: bold;
+    left: 1em;
+    padding: 0 .5em;
+    position: absolute;
+    top: -1em;
+  }
+  
+.logo-position-adjust {
+    margin-bottom: 6%;
+}
+
+
+
+input[type="text"] {
+    height: 34px;
+}
+
+select {
+    height: 34px;
+}

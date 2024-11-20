@@ -1,0 +1,122 @@
+<div class="container-fluid py-4">
+    <div class="row mb-4 align-items-center">
+        <div class="col-auto">
+            <button class="btn btn-outline-primary" (click)="lastWeek()">
+                <i class="bi bi-arrow-left"></i> 上一週
+            </button>
+        </div>
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">一<br>{{data[0].date}}</th>
+                            <th class="text-center">二<br>{{data[1].date}}</th>
+                            <th class="text-center">三<br>{{data[2].date}}</th>
+                            <th class="text-center">四<br>{{data[3].date}}</th>
+                            <th class="text-center">五<br>{{data[4].date}}</th>
+                            <th class="text-center">六<br>{{data[5].date}}</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-outline-primary" (click)="nextWeek()">
+                下一週 <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="alert alert-secondary mb-3">
+        上午診 - 09:00 ~ 12:30 (12:00 看止現場掛號、預約掛號)
+    </div>
+    
+    <div class="table-responsive mb-4">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="time-slot">一診</td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[0].morning_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[1].morning_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[2].morning_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[3].morning_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[4].morning_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[5].morning_cinic_1"></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">二診</td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[0].morning_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[1].morning_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[2].morning_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[3].morning_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[4].morning_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[5].morning_cinic_2"></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">三診</td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[0].morning_cinic_3"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[1].morning_cinic_3"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[2].morning_cinic_3"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[3].morning_cinic_3"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[4].morning_cinic_3"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[5].morning_cinic_3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="alert alert-secondary mb-3">
+        12:00 ~ 12:30
+    </div>
+    
+    <div class="table-responsive mb-4">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="time-slot">一診</td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[0].afternoon_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[1].afternoon_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[2].afternoon_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[3].afternoon_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[4].afternoon_cinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[5].afternoon_cinic_1"></td>
+                </tr>
+                <tr>
+                    <td class="time-slot">二診</td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[0].afternoon_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[1].afternoon_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[2].afternoon_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[3].afternoon_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[4].afternoon_cinic_2"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[5].afternoon_cinic_2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="alert alert-secondary mb-3">
+        下午診 - 13:30 ~ 17:00 (16:30 看止現場掛號、預約掛號)
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="time-slot">一診</td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[0].night_clinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[1].night_clinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[2].night_clinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[3].night_clinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[4].night_clinic_1"></td>
+                    <td><input type="text" class="form-control form-control-sm" [(ngModel)]="data[5].night_clinic_1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 新增的儲存按鈕部分 -->
+    <div class="d-flex justify-content-end mt-4 mb-4">
+        <button class="btn btn-primary" (click)="saveData()">儲存</button>
+    </div> 
+</div>

@@ -1,0 +1,12 @@
+
+
+<table>
+    <tr>
+        <td class="column-header" *ngFor="let cn of ColumnNameList" [ngStyle]="ColumnNameListWidth">
+            {{cn}}
+        </td>
+    </tr>
+    <tr *ngFor="let row of DisplayData">
+        <td *ngFor="let c of row">{{c}}</td>
+      </tr>
+</table>

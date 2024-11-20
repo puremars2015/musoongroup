@@ -1,0 +1,18 @@
+<!-- 漂浮圖標 -->
+<div id="chat-icon">
+    <img src="assets/img/chat_v2.png" alt="Chat Icon">
+</div>
+<!-- 對話框 -->
+<div id="chat-box" style="display:none;">
+    <div id="chat-header">
+        <span>聊天</span>
+        <button id="close-btn">關閉</button>
+    </div>
+    <div id="chat-content">
+        <!-- 對話消息會在這裡顯示 -->
+    </div>
+    <div id="chat-input-area">
+        <input type="text" id="chat-input" class="form-control" placeholder="輸入消息...">
+        <button id="send-btn" (click)="send()">送出</button>
+    </div>
+</div>

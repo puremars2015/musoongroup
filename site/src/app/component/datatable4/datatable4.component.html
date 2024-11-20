@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th class="column-header" *ngFor="let cn of ColumnNameList" [ngStyle]="ColumnNameListWidth">
+            {{cn}}
+        </th>
+    </tr>
+    <tr *ngFor="let row of body;  let i = index">
+        <td *ngFor="let c of row;  let j = index;">{{c}}
+            <input type="text" class="form-control" [(ngModel)]="body[i][j]" />
+        </td>
+    </tr>
+</table>

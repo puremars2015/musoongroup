@@ -1,0 +1,30 @@
+<app-breadcrumb Department="前台設定" Line="木生醫林首頁" MethodName="首頁圖片設定"></app-breadcrumb>
+
+
+<div class="container">
+        <div class="mb-3 row">
+            <label for="editTitle" class="col-sm-2 col-form-label">標題：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="data.title">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="editContent" class="col-sm-2 col-form-label">圖片：</label>
+            <div class="col-sm-10">
+                <!-- <input type="file" class="form-control" (change)="onFileChange($event)"> -->
+                <file-upload (file)="loadExcelJson($event)"></file-upload>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="editOrder" class="col-sm-2 col-form-label">顯示順序：</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" [(ngModel)]="data.display_order">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <div class="col-sm-10 offset-sm-2 text-end">
+                <button type="button" class="btn btn-save mx-1" (click)="save()">保存</button>
+                <button type="button" class="btn btn-cancel mx-1" (click)="cancel()">取消</button>
+            </div>
+        </div>
+</div>

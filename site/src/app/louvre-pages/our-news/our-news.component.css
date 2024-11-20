@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+.container {
+    margin-top: 20px;
+}
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+}
+.form-control, .btn {
+    margin-right: 10px;
+}
+.btn-group {
+    margin-left: 10px;
+}
+.btn-toolbar {
+    justify-content: flex-end;
+}

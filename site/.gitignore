@@ -1,0 +1,5 @@
+# angular 忽略清單
+node_modules/*
+dist/*
+.angular/*
+.vscode/*

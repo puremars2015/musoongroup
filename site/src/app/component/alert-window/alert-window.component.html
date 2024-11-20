@@ -1,0 +1,24 @@
+<!-- Basic Modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertWindow"
+    (click)="openModal()">
+    警告視窗
+</button>
+<div class="modal fade" id="alertWindow" tabindex="-1" [ngStyle]="modalStyle">
+    <div class="modal-dialog">
+        <div class="modal-content" [ngStyle]="contentStyle">
+            <div class="modal-header">
+                <h5 class="modal-title">Basic Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+                XXX
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    (click)="closeModal()">{{confirm}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Basic Modal-->

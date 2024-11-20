@@ -1,0 +1,8 @@
+# python常用忽略清單
+__pycache__/
+backstage/
+louvre/
+musoon/
+home/
+compression/
+uploads/

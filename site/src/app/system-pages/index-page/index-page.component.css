@@ -1,0 +1,22 @@
+.execute-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.execute-table-header {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}

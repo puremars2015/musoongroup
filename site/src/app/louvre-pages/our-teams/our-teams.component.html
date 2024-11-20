@@ -1,0 +1,55 @@
+<app-breadcrumb Department="前台設定" Line="羅浮婦女診所設定" MethodName="醫療團隊"></app-breadcrumb>
+
+<div class="container">
+    <div class="row mb-3">
+
+    <!-- <div class="col">
+        <label for="urgentTask" class="form-label">標題 :</label>
+        <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="inputValue.title">
+        </div>
+    </div>
+    <div class="col">
+        <label for="fulfill" class="form-label">內容 :</label>
+        <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="inputValue.content">
+        </div>
+    </div> -->
+    </div>
+    <div class="row mb-3">
+        <div class="col d-flex justify-content-end">
+            <!-- <button class="btn btn-primary" (click)="search()">搜尋</button> -->
+           <button class="btn btn-primary" (click)="move('add')">新增</button>
+        </div>
+    </div>
+    <h4></h4>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>標題</th>
+                    <th>專長</th>
+                    <th>學經歷</th>
+                    <th>圖片</th>
+                    <th>顯示順序</th>
+                    <th>管理功能</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of articles">
+                    <td>{{row.title}}</td>
+                    <td>{{row.content}}</td>
+                    <td>{{row.content2}}</td>
+                    <td>
+                        <img src="{{server}}{{row.img_url}}" alt="{{row.img_url}}" style="width: 100px;">
+                    </td>
+                    <td>{{row.display_order}}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" (click)="move(row.id)">編輯</button>
+                        <button class="btn btn-danger btn-sm" (click)="remove(row.id)">刪除</button>
+                    </td>
+                </tr>    
+            </tbody>
+        </table>
+    </div>
+</div>

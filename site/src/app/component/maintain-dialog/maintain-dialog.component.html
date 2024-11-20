@@ -1,0 +1,26 @@
+
+
+<!-- Basic Modal -->
+<button type="button" style="border: none;" class="maintain-delete-button" data-bs-toggle="modal" data-bs-target="#basicModal"
+    (click)="onOpenClick()">
+    <img src="assets/img/pencil.png" style="width: 20px; height: 20px;">
+</button>
+<div class="modal fade" id="basicModal" tabindex="-1" [ngStyle]="modalStyle">
+    <div class="modal-dialog">
+        <div class="modal-content" [ngStyle]="contentStyle">
+            <div class="modal-header">
+                <h5 class="modal-title">維護成功</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="onNoClick()"></button>
+            </div>
+            <div class="modal-body">
+                <p>是否前往主表？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onNoClick()">No</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onYesClick()">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Basic Modal-->

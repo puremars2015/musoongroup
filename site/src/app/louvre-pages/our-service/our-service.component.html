@@ -1,0 +1,52 @@
+<app-breadcrumb Department="前台設定" Line="羅浮婦女診所設定" MethodName="診療項目"></app-breadcrumb>
+
+<div class="container">
+    <div class="mb-3 row">
+        <label for="editContent" class="col-sm-2 col-form-label">左側圖片:</label>
+        <div class="col-sm-10">
+             <file-upload (file)="loadExcelJson($event)"></file-upload>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="editTitle" class="col-sm-2 col-form-label">標題1:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="data.title1">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="editTitle" class="col-sm-2 col-form-label">內容1:</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" [(ngModel)]="data.content1"></textarea>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="editTitle" class="col-sm-2 col-form-label">標題2:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="data.title2">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="editTitle" class="col-sm-2 col-form-label">內容2:</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" [(ngModel)]="data.content2"></textarea>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="editTitle" class="col-sm-2 col-form-label">標題3:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="data.title3">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="editTitle" class="col-sm-2 col-form-label">內容3:</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" [(ngModel)]="data.content3"></textarea>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <div class="col-sm-10 offset-sm-2 text-end">
+            <button type="button" class="btn btn-save mx-1" (click)="save()">保存</button>
+        </div>
+    </div>
+</div>

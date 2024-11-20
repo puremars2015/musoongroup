@@ -1,0 +1,21 @@
+
+@media (min-width: 1600px) {
+    .title-label {
+        font-size: 24px;
+    }
+}
+
+#header.slide-up {
+    top: -100px;
+    transition: top 0.3s;
+}
+
+.level2 {
+    padding-left: 80px !important;
+}
+
+@media print{
+    #header{
+        display: none;
+    }
+}
