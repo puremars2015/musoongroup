@@ -125,6 +125,19 @@ app.mount("/musoon", Musoon(directory="musoon"), name="musoon")
 # Mount the static files directory
 app.mount("/home", Home(directory="home"), name="home")
 
+
+# 將 / 的資料都轉址到 /home
+@app.get("/robot.txt")
+async def redirect():
+    return FileResponse("robot.txt")
+
+
+# 將 / 的資料都轉址到 /home
+@app.get("/sitemap.xml")
+async def redirect():
+    return FileResponse("sitemap.xml")
+
+
 # 將 / 的資料都轉址到 /home
 @app.get("/")
 async def redirect():

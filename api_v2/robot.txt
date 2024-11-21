@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin
+Disallow: /private
+Disallow: /backstage
+Allow: /home
+Allow: /louvre
+Allow: /musoon
+
+Sitemap: https://musoongroup.com.tw/sitemap.xml
